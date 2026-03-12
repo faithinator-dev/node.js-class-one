@@ -96,3 +96,7 @@ app.listen(port, () => {
     //     //code to handle the request and send a response
     // });
 //Put: used to update data on the server
+//patch: used to partially update data on the server
+//delete: used to delete data from the server
+//options: used to describe the communication options for the target resource
+//head: used to retrieve the headers of a resource without fetching the body
