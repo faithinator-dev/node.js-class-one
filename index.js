@@ -77,12 +77,23 @@ app.listen(port, () => {
     //     //code to handle the request and send a response
     // });
 
-    app.get("/", (req, res) => {
+    app.get("/greeting", (req, res) => {
         res.send("Hello, welcome to my server!");
     });
 
     app.get("/students", (req, res) => {
         res.send(sudents);
+    })
+
+    app.get("/home", (req, res) => {
+        res.send("Welcome to the home page");
+        console.log(__dirname);
+    })
+
+    app.get("/", (req, res) => {
+        res.sendFile(__dirname + "/index.html");
+
+        // /index.html is the file that we want to send to the client
     })
 //Post: used to send data to the server
     //it is commonly used when submitting forms or sending data to the server for processing
